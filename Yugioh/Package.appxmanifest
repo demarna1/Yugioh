@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="d4826f60-c75a-4b89-925d-67941e432b1f" Publisher="CN=Noah" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>Yugioh</DisplayName>
+    <PublisherDisplayName>Noah</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Yugioh.App">
+      <VisualElements DisplayName="Yugioh" Logo="Assets\Logos\Logo.png" SmallLogo="Assets\Logos\LogoSmall.png" Description="Yugioh" ForegroundText="dark" BackgroundColor="#EDD51F">
+        <DefaultTile ShowName="allLogos" WideLogo="Assets\Logos\LogoWide.png" />
+        <SplashScreen Image="Assets\Logos\LogoSplash.png" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+        </InitialRotationPreference>
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B81859F4-01E6-40AE-88EE-41D82E08FD76}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yugioh</RootNamespace>
+    <AssemblyName>Yugioh</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>Yugioh_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CardData.cs" />
+    <Compile Include="CardCollection.cs" />
+    <Compile Include="CardContainer.cs" />
+    <Compile Include="Duel.xaml.cs">
+      <DependentUpon>Duel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EffectCardContainer.cs" />
+    <Compile Include="EnemyDecks.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="SpellCardContainer.cs" />
+    <Compile Include="MonsterCardContainer.cs" />
+    <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Common\BooleanNegationConverter.cs" />
+    <Compile Include="Common\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Common\LayoutAwarePage.cs" />
+    <Compile Include="Common\RichTextColumns.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeckBuilder.xaml.cs">
+      <DependentUpon>DeckBuilder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrapCardContainer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Yugioh_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\CardBackground.png" />
+    <Content Include="Assets\LockedCard.png" />
+    <Content Include="Assets\Spell\BlockAttack.jpg" />
+    <Content Include="Assets\Spell\DianKetoTheCureMaster.jpg" />
+    <Content Include="Assets\Spell\PotOfGreed.jpg" />
+    <Content Include="Assets\Spell\RemoveTrap.jpg" />
+    <Content Include="Assets\Spell\StopDefense.jpg" />
+    <Content Include="Assets\Monster\Ansatsu.jpg" />
+    <Content Include="Assets\Monster\AquaMadoor.jpg" />
+    <Content Include="Assets\Logos\Logo.png" />
+    <Content Include="Assets\Logos\LogoSmall.png" />
+    <Content Include="Assets\Logos\LogoSplash.png" />
+    <Content Include="Assets\Logos\LogoWide.png" />
+    <Content Include="Assets\Monster\ArmoredLizard.jpg" />
+    <Content Include="Assets\Monster\BabyDragon.jpg" />
+    <Content Include="Assets\Monster\BeastOfTalwar.jpg" />
+    <Content Include="Assets\Monster\ClownZombie.jpg" />
+    <Content Include="Assets\Monster\CurseOfDragon.jpg" />
+    <Content Include="Assets\Monster\DarkfireSoldier1.jpg" />
+    <Content Include="Assets\Monster\DarkMagician.jpg" />
+    <Content Include="Assets\Monster\DarkTitanOfTerror.jpg" />
+    <Content Include="Assets\Monster\DHuman.jpg" />
+    <Content Include="Assets\Monster\Dokuroyaiba.jpg" />
+    <Content Include="Assets\Monster\FairyDragon.jpg" />
+    <Content Include="Assets\Monster\FeralImp.jpg" />
+    <Content Include="Assets\Monster\FlameManipulator.jpg" />
+    <Content Include="Assets\Monster\GazelleTheKingOfMythicalBeasts.jpg" />
+    <Content Include="Assets\Monster\GiantSoldierOfStone.jpg" />
+    <Content Include="Assets\Monster\GyakutennoMegami.jpg" />
+    <Content Include="Assets\Monster\HarpieGirl.jpg" />
+    <Content Include="Assets\Monster\JudgeMan.jpg" />
+    <Content Include="Assets\Monster\Kumootoko.jpg" />
+    <Content Include="Assets\Monster\MagicalGhost.jpg" />
+    <Content Include="Assets\Monster\MWarrior1.jpg" />
+    <Content Include="Assets\Monster\MWarrior2.jpg" />
+    <Content Include="Assets\Monster\OgreOfTheBlackShadow.jpg" />
+    <Content Include="Assets\Monster\OneEyedShieldDragon.jpg" />
+    <Content Include="Assets\Monster\RogueDoll.jpg" />
+    <Content Include="Assets\Monster\RudeKaiser.jpg" />
+    <Content Include="Assets\Monster\ScienceSoldier.jpg" />
+    <Content Include="Assets\Monster\SilverFang.jpg" />
+    <Content Include="Assets\Monster\SkullServant.jpg" />
+    <Content Include="Assets\Monster\SpiritOfTheHarp.jpg" />
+    <Content Include="Assets\Monster\SwordsmanOfLandstar.jpg" />
+    <Content Include="Assets\Monster\TerraTheTerrible.jpg" />
+    <Content Include="Assets\Monster\Wingweaver.jpg" />
+    <Content Include="Assets\Monster\WittyPhantom.jpg" />
+    <Content Include="Assets\SpaceBackground.jpg" />
+    <Content Include="Assets\Trap\CastleWalls.jpg" />
+    <Content Include="Assets\Trap\EnchantedJavelin.jpg" />
+    <Content Include="Assets\Trap\Reinforcements.jpg" />
+    <Content Include="Assets\Trap\RingOfDestruction.jpg" />
+    <Content Include="Assets\Trap\SolemnWishes.jpg" />
+    <Content Include="Assets\Trap\UltimateOffering.jpg" />
+    <Content Include="Assets\YugiohCard.png" />
+    <Content Include="Common\ReadMe.txt" />
+    <Page Include="Duel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeckBuilder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
